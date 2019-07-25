@@ -1,0 +1,9 @@
+/Builds/*
+/Temp/*
+Builds/
+Temp/
+Library/
+*.aab
+*.txt
+*.zip
+db.lock
