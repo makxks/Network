@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Packets : MonoBehaviour {
 
@@ -10,7 +11,10 @@ public class Packets : MonoBehaviour {
 
     private void Start()
     {
-        time = GameObject.FindGameObjectWithTag("Time").GetComponent<TimeDisplay>();
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            time = GameObject.FindGameObjectWithTag("Time").GetComponent<TimeDisplay>();
+        }
     }
 
     public void addPacket(GameObject packet)
@@ -42,7 +46,10 @@ public class Packets : MonoBehaviour {
         }
         if(GameObject.FindGameObjectWithTag("GameController").GetComponent<RemainingPackets>().getPackets() == 0)
         {
-            time.setGameComplete(true);
+            if (SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                time.setGameComplete(true);
+            }
             ShowFinalScore finalScore = GameObject.FindGameObjectWithTag("FinalScore").GetComponent<ShowFinalScore>();
             FinalScore score = GameObject.FindGameObjectWithTag("Score").GetComponent<FinalScore>();
             score.calculateFinalScore();

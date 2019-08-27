@@ -47,10 +47,10 @@ public class GenerateNetwork : MonoBehaviour {
         for(int i = 0; i < nodeList.Count; i++)
         {
             while(
-                xPos > nodeList[i].transform.position.x - 20f &&
-                xPos < nodeList[i].transform.position.x + 20f &&
-                yPos > nodeList[i].transform.position.y - 20f &&
-                yPos < nodeList[i].transform.position.y + 20f
+                xPos > nodeList[i].transform.position.x - 50f &&
+                xPos < nodeList[i].transform.position.x + 50f &&
+                yPos > nodeList[i].transform.position.y - 50f &&
+                yPos < nodeList[i].transform.position.y + 50f
                 )
             {
                 xPos = Random.Range(-sizeX, sizeX);

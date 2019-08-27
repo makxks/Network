@@ -76,7 +76,7 @@ public class SelectNode : MonoBehaviour {
     {
         for(int i=0; i<nodes.Count; i++)
         {
-            nodes[i].GetComponent<Animators>().getConnectedAnimator().SetBool("isConnected", isConnected);
+            nodes[i].GetComponent<Animators>().getButtonImageAnimator().SetBool("isConnected", isConnected);
         }
     }
 

@@ -10,6 +10,8 @@ public class Animators : MonoBehaviour {
     private Animator target;
     [SerializeField]
     private Animator connectedNode;
+    [SerializeField]
+    private Animator buttonImageAnimator;
 
     public Animator getActiveAnimator()
     {
@@ -24,5 +26,10 @@ public class Animators : MonoBehaviour {
     public Animator getConnectedAnimator()
     {
         return connectedNode;
+    }
+
+    public Animator getButtonImageAnimator()
+    {
+        return buttonImageAnimator;
     }
 }
