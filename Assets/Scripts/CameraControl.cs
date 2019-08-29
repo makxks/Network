@@ -122,7 +122,9 @@ public class CameraControl : MonoBehaviour {
             /*if (touchTimer > 0.2f)
             {
             */
-                moveToMouse();
+                // ** for PC build controls **
+                //moveToMouse();
+
             /*
         }
             */
