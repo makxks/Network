@@ -26,7 +26,7 @@ public class CameraControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (!pause.getPaused())
-        {
+        {/*
             if (touching)
             {
                 touchTimer += Time.deltaTime;
@@ -104,7 +104,7 @@ public class CameraControl : MonoBehaviour {
                 {
                     zoom = Mathf.Min(Camera.main.orthographicSize + zoomSpeed, maxZoom);
                 }
-            }
+            }*/
             
             if (Input.GetAxisRaw("Mouse ScrollWheel") > 0)
             {
@@ -123,7 +123,7 @@ public class CameraControl : MonoBehaviour {
             {
             */
                 // ** for PC build controls **
-                //moveToMouse();
+                moveToMouse();
 
             /*
         }
